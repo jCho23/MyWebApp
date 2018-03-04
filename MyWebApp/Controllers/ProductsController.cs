@@ -9,5 +9,16 @@ namespace MyWebApp.Controllers
 {
     public class ProductsController : ApiController
     {
+        Product[] products = new Product[]
+        {
+
+        };
+
+        public IEnumerable<Product> GetAllProducts()
+        {
+            return products;
+        }
+
+
     }
 }
