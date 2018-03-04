@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyWebApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,7 +12,9 @@ namespace MyWebApp.Controllers
     {
         Product[] products = new Product[]
         {
-
+            new Product { Id= 1, ProductName= "Jordans", Price=1},
+            new Product { Id= 1, ProductName= "Boost", Price= 3.75M},
+            new Product { Id= 1, ProductName= "Nike", Price=16.99M}
         };
 
         public IEnumerable<Product> GetAllProducts()
