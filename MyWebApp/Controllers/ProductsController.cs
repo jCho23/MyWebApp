@@ -22,6 +22,16 @@ namespace MyWebApp.Controllers
             return products;
         }
 
+        public IHttpActionResult GetProduct(int id)
+        {
+            var product = products.FirstOrDefault((x) => x.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return Ok(product);
+        }
+
 
     }
 }
